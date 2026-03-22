@@ -123,10 +123,11 @@ docker compose down
 The repo includes a `.env` used by `docker-compose.yml`:
 
 ```
-POSTGRES_DB=fraud
-POSTGRES_USER=app
-POSTGRES_PASSWORD=app
-KAFKA_ADVERTISED_LISTENER_HOST=localhost
+PGUSER=app
+PGPASSWORD=app
+PGDATABASE=fraud
+PGADMIN_EMAIL=admin@example.com
+PGADMIN_PASSWORD=admin123
 ```
 
 > **Note:** Kafka exposes **9094** to the host (for your local producer) and **9092** inside the Docker network (for Spark).
