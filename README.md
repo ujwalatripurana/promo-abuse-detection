@@ -43,7 +43,7 @@ Detect repeated sign-ups (promo/trial abuse) within a **rolling 24-hour window**
 ```mermaid
 flowchart LR
   subgraph Producer (Sim / Real App)
-    A[Signup Event \n {user_id, device_id, timestamp, ...}]
+    A[Signup Event: user_id, device_id, timestamp]
   end
 
   subgraph Kafka
@@ -52,7 +52,7 @@ flowchart LR
 
   subgraph Spark Structured Streaming
     S1[Parse + watermark(24h)]
-    S2[Window(ts, 24h) \n groupBy(key).count()]
+    S2[Window ts 24h groupBy key count]
     S3{count >= THRESHOLD}
   end
 
