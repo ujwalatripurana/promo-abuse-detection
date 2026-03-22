@@ -51,7 +51,7 @@ flowchart LR
   end
 
   subgraph Spark Structured Streaming
-    S1[Parse + watermark(24h)]
+    S1[Parse + watermark 24h]
     S2[Window ts 24h groupBy key count]
     S3{count >= THRESHOLD}
   end
