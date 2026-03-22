@@ -42,7 +42,7 @@ Detect repeated sign-ups (promo/trial abuse) within a **rolling 24-hour window**
 
 ```mermaid
 flowchart LR
-  subgraph Producer (Sim / Real App)
+  subgraph Producer
     A[Signup Event: user_id, device_id, timestamp]
   end
 
